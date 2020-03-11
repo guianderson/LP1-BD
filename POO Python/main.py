@@ -1,0 +1,26 @@
+from conta   import Conta
+from cliente import Cliente
+
+conta1 = Conta('123-4', 'Josué', 1000.0, 1500.0)
+conta2 = Conta('567-8', 'Maria', 2000.0, 2500.0)
+
+print("##################################################\n")
+print("Depositando R$ 1000.0 na conta do Josué")
+print("conta1.depositar(1000.0)\n")
+conta1.depositar(1000.0)
+conta1.extrato1()
+print("\n##################################################\n")
+print("Sacando R$ 500.0 na conta da Maria")
+print("conta2.saca(500.0)\n")
+conta2.saca(500.0)
+conta2.extrato1()
+print("\n###################################################\n")
+print("Maria fazendo transferencia de R$ 100 para Josué")
+print("conta1.transfere_para(conta2, 100.0)")
+conta1.transfere_para(conta2, 100.0)
+print("\n##################################################")
+print("\nExtrato de Maria:")
+conta2.extrato1()
+print("\n Extrato do Josué:")
+conta1.extrato1()
+print("\n##################################################")
